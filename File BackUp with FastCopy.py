@@ -7,16 +7,16 @@ from datetime import datetime
 #source = r"C:\TS\HWS"
 #dest = r"E:\Educational\HWS"
 source = r"C:\TS\HWS"
-dest = r"E:\Educational\HWS"
-threshold = 1024  # in megabytes
-interval = 5 * 60  # in seconds
+dest = r"E:\Educational\HWS\HWS"
+threshold = 102  # in megabytes
+interval = 30  # in seconds
 fastcopy = "fastcopy.exe"
 
 # Get the current date and time
 dateTimeFormat = "%Y-%m-%d_%H-%M-%S"
 
 def countdown(t):
-    while t:
+    while t + 1:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         print("Next Backup cycle in ",timer,".", end='\r')
